@@ -1,0 +1,16 @@
+:host {
+    display: block; 
+    color: #ffffff; 
+    text-align: center; 
+}
+
+
+.hover-effect {
+    color: #3f51b5; 
+    text-decoration: underline, unset; 
+    transition: color 0.3s ease; 
+}
+
+.hover-effect:hover {
+    color: #79FFA0; 
+}
