@@ -26,12 +26,12 @@ jobs:
         run: npm run build:prod
 
       - name: Rename index for routing
-        run: mv dist/wiki-anime/index.html dist/wiki-anime/404.html
+        run: mv dist/wiki-anime/browser/index.html dist/wiki-anime/browser/404.html
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4.0.0
         with:
-          build_dir: dist/wiki-anime
+          build_dir: dist/wiki-anime/browser
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
