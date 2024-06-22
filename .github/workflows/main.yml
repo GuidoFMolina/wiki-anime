@@ -25,6 +25,9 @@ jobs:
       - name: Build Angular app
         run: npm run build:prod
 
+      - name: Rename index for routing
+        run: mv dist/wiki-anime/index.html dist/wiki-anime/404.html
+
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4.0.0
         with:
