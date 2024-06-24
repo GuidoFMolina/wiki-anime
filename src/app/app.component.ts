@@ -13,4 +13,7 @@ import { FooterComponent } from "./pages/footer/footer.component";
 })
 export class AppComponent {
   title = 'wiki-anime';
+  isDarkMode = false;
+
+  
 }

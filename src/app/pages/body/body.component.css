@@ -1,7 +1,11 @@
 :host {
     display: block; 
+    background: #181818;
     color: #ffffff; 
     text-align: center; 
+}
+body{
+    background: #181818; 
 }
 
 
@@ -13,4 +17,76 @@
 
 .hover-effect:hover {
     color: #79FFA0; 
+}
+
+.service-card {
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro con transparencia */
+    color: white; /* Texto blanco para contraste */
+    position: relative; /* Para asegurar que el pseudo-elemento se posicione correctamente */
+    overflow: hidden; /* Para recortar el fondo difuminado que se salga del borde */
+}
+
+.card-content-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://th.bing.com/th/id/OIP.qNpF17VijxiftrScBljhLQHaEo?rs=1&pid=ImgDetMain') center/cover no-repeat;  /*Ajusta el camino de la imagen */
+    filter: blur(3px); /* Aplicar el desenfoque */
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+    opacity: 100; /* Controla la opacidad de la imagen de fondo */
+}
+
+.card-content-left-center::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://th.bing.com/th/id/OIP.HXpbTekd_Dd9knN7BQ-JCAAAAA?rs=1&pid=ImgDetMain') center/cover no-repeat;  /*Ajusta el camino de la imagen */
+    filter: blur(3px); /* Aplicar el desenfoque */
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+    opacity: 10; /* Controla la opacidad de la imagen de fondo */
+}
+
+.card-content-right-center::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://th.bing.com/th/id/R.35672c0899d221de6cf6c4191441506b?rik=Sw%2bzQfvXNCdNpA&riu=http%3a%2f%2forig00.deviantart.net%2fd0fc%2ff%2f2008%2f031%2fd%2fe%2fdeath_note_banner_by_tsukikage_firefly.png&ehk=p0eNZPT177pHlkPnmf6S25qh5GKdosKZf7XS4APOjn8%3d&risl=&pid=ImgRaw&r=0') center/cover no-repeat;  /*Ajusta el camino de la imagen */
+    filter: blur(3px); /* Aplicar el desenfoque */
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+    opacity: 10; /* Controla la opacidad de la imagen de fondo */
+}
+
+.card-content-right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://th.bing.com/th/id/R.ca2d9a862d2948dc7815f68529d84d12?rik=3C6kOpe7WjPp2A&pid=ImgRaw&r=0') center/cover no-repeat;  /*Ajusta el camino de la imagen */
+    filter: blur(3px); /* Aplicar el desenfoque */
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+    opacity: 10; /* Controla la opacidad de la imagen de fondo */
+}
+
+.service-card .content {
+    position: relative; /* Para que el contenido se posicione sobre el fondo difuminado */
+    z-index: 1; /* Asegura que el contenido esté por encima del pseudo-elemento */
+}
+
+.service-card a, .service-card h4, .service-card p {
+    color: white; /* Asegura que todos los elementos de texto tengan un color blanco */
+}
+
+p, h4, a{
+    font-weight: bold;
 }

@@ -15,6 +15,10 @@
       var(--orange-red) 0%,
       var(--vivid-pink) 50%,
       var(--electric-violet) 100%
+
+      --background-color: #ffffff;
+      --text-color: #000000;
+      --primary-color: #007bff;
     );
 
     --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
@@ -32,6 +36,13 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  .dark-theme {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #bb86fc;
+    /* Ajusta los colores para el modo oscuro */
   }
 
   h1 {
@@ -62,9 +73,18 @@
     position: relative;
   }
 
-  .angular-logo {
-    max-width: 9.2rem;
-  }
+  /* Aplicar las variables a elementos globales */
+body {
+  background-color: var(black);
+  color: var(white);
+}
+
+
+.header, .footer, .main-content {
+  background-color: var(black);
+  color: var(white);
+}
+
 
   .content {
     display: flex;
@@ -165,3 +185,7 @@
       margin-block: 1.5rem;
     }
   }
+
+ 
+
+
