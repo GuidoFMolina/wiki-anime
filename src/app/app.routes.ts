@@ -6,5 +6,6 @@ export const routes: Routes = [
         {path: 'header', loadChildren: () => import('./pages/header/header.module').then(m => m.HeaderModule)},
         {path: 'body', loadChildren: () => import('./pages/body/body.module').then(m => m.BodyModule)},
         {path: 'footer', loadChildren: () => import('./pages/footer/footer.module').then(m => m.FooterModule)},
+        {path: 'form-view', loadChildren: () => import('./pages/forms/form-view/form-view.module').then(m => m.FormViewModule)},
         {path: '', redirectTo: '/home', pathMatch: 'full'}
     ];
